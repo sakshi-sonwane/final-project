@@ -64,40 +64,39 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="text-white px-10 py-10">
+    <div className="text-white px-6 md:px-10 py-10">
       {/* Header */}
-      <p className="text-[#6E00FF] text-sm font-semibold tracking-widest uppercase mb-4">
+      <p className="text-[#6E00FF] text-xs md:text-sm font-semibold tracking-widest uppercase mb-4">
         Our Expertise
       </p>
-      <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-16">
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-12 md:mb-16">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
           Services
         </h1>
-        <p className="text-[#8892A4] text-lg leading-relaxed max-w-lg mt-2">
+        <p className="text-[#8892A4] text-base md:text-lg leading-relaxed max-w-lg mt-2">
           We provide a full spectrum of digital services, from initial
           conceptualization to high-performance engineering and global scaling.
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-16 md:mb-20">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-[#1A1A2E] border border-[#2A2A3E] rounded-2xl p-6 hover:border-[#6E00FF] transition-all duration-300 group flex flex-col justify-between"
+            className="bg-[#1A1A2E] border border-[#2A2A3E] rounded-2xl p-5 md:p-6 hover:border-[#6E00FF] transition-all duration-300 group flex flex-col justify-between"
           >
-            {/* Icon + Title */}
             <div>
               <div className="w-11 h-11 flex items-center justify-center rounded-xl bg-[#6E00FF]/20 group-hover:bg-[#6E00FF]/40 transition-all duration-300 mb-4">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+              <h3 className="text-base md:text-lg font-semibold mb-2">
+                {service.title}
+              </h3>
               <p className="text-[#8892A4] text-sm leading-relaxed mb-4">
                 {service.desc}
               </p>
             </div>
-
-            {/* Tags */}
             <div className="flex flex-wrap gap-2">
               {service.tags.map((tag, i) => (
                 <span
@@ -113,9 +112,9 @@ const Services = () => {
       </div>
 
       {/* Bottom CTA */}
-      <div className="bg-[#1A1A2E] border border-[#2A2A3E] rounded-3xl p-10 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="bg-[#1A1A2E] border border-[#2A2A3E] rounded-3xl p-6 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
         <div>
-          <h4 className="text-2xl font-extrabold mb-2">
+          <h4 className="text-xl md:text-2xl font-extrabold mb-2">
             Ready to start your journey?
           </h4>
           <p className="text-[#8892A4] text-sm leading-relaxed max-w-lg">
@@ -124,7 +123,7 @@ const Services = () => {
             digital edge.
           </p>
         </div>
-        <button className="flex items-center gap-2 px-8 py-3 bg-[#6E00FF] rounded-3xl font-semibold hover:bg-[#5A1F8F] transition-all duration-300 whitespace-nowrap">
+        <button className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-3 bg-[#6E00FF] rounded-3xl font-semibold hover:bg-[#5A1F8F] transition-all duration-300 whitespace-nowrap">
           Consult with our Engineers
           <FaArrowRight />
         </button>

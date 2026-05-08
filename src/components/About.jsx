@@ -33,19 +33,20 @@ const About = () => {
   ];
 
   return (
-    <div className="text-white px-10 py-10">
+    <div className="text-white px-6 md:px-10 py-10 max-w-7xl mx-auto">
       {/* Top Label */}
-      <p className="text-[#6E00FF] text-sm font-semibold tracking-widest uppercase mb-4">
+      <p className="text-[#6E00FF] text-xs md:text-sm font-semibold tracking-widest uppercase mb-4 text-center md:text-left">
         Who We Are
       </p>
 
       {/* Heading */}
-      <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-16">
-        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight max-w-xl">
-          We Are <span className="text-[#6E00FF]">NovaEdge</span> <br />
+      <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 mb-12 md:mb-16">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight max-w-xl text-center md:text-left w-full">
+          We Are <span className="text-[#6E00FF]">NovaEdge</span>{" "}
+          <br className="hidden md:block" />
           Digital Labs
         </h2>
-        <p className="text-[#8892A4] text-lg leading-relaxed max-w-lg mt-4">
+        <p className="text-[#8892A4] text-base md:text-lg leading-relaxed max-w-lg mt-2 md:mt-4 text-center md:text-left">
           A premier digital engineering studio based in Indore, India. We
           partner with startups and enterprises to build world-class digital
           products — from concept to deployment and beyond.
@@ -53,35 +54,35 @@ const About = () => {
       </div>
 
       {/* Stats Row */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-12 md:mb-20">
         {stats.map((stat, index) => (
           <div
             key={index}
-            className="bg-[#1A1A2E] border border-[#2A2A3E] rounded-2xl p-6 text-center hover:border-[#6E00FF] transition-all duration-300"
+            className="bg-[#1A1A2E] border border-[#2A2A3E] rounded-2xl p-4 md:p-6 text-center hover:border-[#6E00FF] transition-all duration-300"
           >
-            <h3 className="text-4xl font-extrabold text-white mb-1">
+            <h3 className="text-2xl md:text-4xl font-extrabold text-white mb-1">
               {stat.number}
             </h3>
-            <p className="text-[#8892A4] text-sm">{stat.label}</p>
+            <p className="text-[#8892A4] text-xs md:text-sm">{stat.label}</p>
           </div>
         ))}
       </div>
 
       {/* Divider */}
-      <div className="border-t border-white/10 mb-20" />
+      <div className="border-t border-white/10 mb-12 md:mb-20" />
 
       {/* Values Section */}
-      <div className="flex flex-col md:flex-row gap-16 items-start">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
         {/* Left */}
-        <div className="md:w-1/2">
-          <p className="text-[#6E00FF] text-sm font-semibold tracking-widest uppercase mb-4">
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <p className="text-[#6E00FF] text-xs md:text-sm font-semibold tracking-widest uppercase mb-4">
             Our Values
           </p>
-          <h3 className="text-4xl font-extrabold mb-6 leading-tight">
+          <h3 className="text-2xl md:text-4xl font-extrabold mb-6 leading-tight">
             Built on Principles <br />
             That <span className="text-[#6E00FF]">Matter</span>
           </h3>
-          <p className="text-[#8892A4] text-lg leading-relaxed">
+          <p className="text-[#8892A4] text-base md:text-lg leading-relaxed">
             At NovaEdge, we don't just build software — we build trust,
             partnerships, and lasting digital legacies. Our core values drive
             every line of code and every client interaction.
@@ -89,17 +90,19 @@ const About = () => {
         </div>
 
         {/* Right — Values Grid */}
-        <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
           {values.map((val, index) => (
             <div
               key={index}
-              className="bg-[#1A1A2E] border border-[#2A2A3E] rounded-2xl p-6 hover:border-[#6E00FF] transition-all duration-300 group"
+              className="bg-[#1A1A2E] border border-[#2A2A3E] rounded-2xl p-5 md:p-6 hover:border-[#6E00FF] transition-all duration-300 group"
             >
-              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#6E00FF]/20 group-hover:bg-[#6E00FF]/40 transition-all duration-300 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-[#6E00FF]/20 group-hover:bg-[#6E00FF]/40 transition-all duration-300 mb-4 mx-auto sm:mx-0">
                 {val.icon}
               </div>
-              <h4 className="text-white font-semibold mb-2">{val.title}</h4>
-              <p className="text-[#8892A4] text-sm leading-relaxed">
+              <h4 className="text-white font-semibold mb-2 text-center sm:text-left">
+                {val.title}
+              </h4>
+              <p className="text-[#8892A4] text-sm leading-relaxed text-center sm:text-left">
                 {val.desc}
               </p>
             </div>
@@ -108,16 +111,16 @@ const About = () => {
       </div>
 
       {/* Bottom CTA Strip */}
-      <div className="mt-20 bg-[#1A1A2E] border border-[#2A2A3E] rounded-3xl p-10 flex flex-col md:flex-row justify-between items-center gap-6">
-        <div>
-          <h4 className="text-2xl font-extrabold mb-2">
+      <div className="mt-12 md:mt-20 bg-[#1A1A2E] border border-[#2A2A3E] rounded-3xl p-6 md:p-10 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
+        <div className="max-w-md">
+          <h4 className="text-lg md:text-2xl font-extrabold mb-2">
             Want to work with us?
           </h4>
-          <p className="text-[#8892A4] text-sm">
+          <p className="text-[#8892A4] text-sm md:text-base">
             We're always looking for ambitious projects and talented people.
           </p>
         </div>
-        <button className="px-8 py-3 bg-[#6E00FF] rounded-3xl font-semibold hover:bg-[#5A1F8F] transition-all duration-300 whitespace-nowrap">
+        <button className="w-full md:w-auto px-8 py-3 bg-[#6E00FF] rounded-3xl font-semibold hover:bg-[#5A1F8F] transition-all duration-300 whitespace-nowrap">
           Get In Touch
         </button>
       </div>
