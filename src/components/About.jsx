@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import { FaCode, FaBrain, FaRocket, FaUsers } from "react-icons/fa";
 
 const About = () => {
@@ -120,7 +122,10 @@ const About = () => {
             We're always looking for ambitious projects and talented people.
           </p>
         </div>
-        <button className="w-full md:w-auto px-8 py-3 bg-[#6E00FF] rounded-3xl font-semibold hover:bg-[#5A1F8F] transition-all duration-300 whitespace-nowrap">
+        <button
+          onClick={() => navigate("/contact")}
+          className="w-full md:w-auto px-8 py-3 bg-[#6E00FF] rounded-3xl font-semibold hover:bg-[#5A1F8F] transition-all duration-300 whitespace-nowrap"
+        >
           Get In Touch
         </button>
       </div>

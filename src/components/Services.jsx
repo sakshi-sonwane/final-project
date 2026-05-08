@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FaCode,
   FaCloud,
@@ -63,6 +64,7 @@ const services = [
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <div className="text-white px-6 md:px-10 py-10">
       {/* Header */}
@@ -123,7 +125,10 @@ const Services = () => {
             digital edge.
           </p>
         </div>
-        <button className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-3 bg-[#6E00FF] rounded-3xl font-semibold hover:bg-[#5A1F8F] transition-all duration-300 whitespace-nowrap">
+        <button
+          onClick={() => navigate("/contact")}
+          className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-3 bg-[#6E00FF] rounded-3xl font-semibold hover:bg-[#5A1F8F] transition-all duration-300 whitespace-nowrap"
+        >
           Consult with our Engineers
           <FaArrowRight />
         </button>

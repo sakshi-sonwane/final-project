@@ -42,7 +42,7 @@ const Contact = () => {
             </div>
             <h4 className="font-semibold mb-1">Email Us</h4>
             <p className="text-[#8892A4] text-sm">
-              hello@novaedgedigitallabs.in
+              contact@novaedgedigitallabs.in
             </p>
           </div>
 
@@ -52,7 +52,7 @@ const Contact = () => {
             </div>
             <h4 className="font-semibold mb-1">Visit Our Lab</h4>
             <p className="text-[#8892A4] text-sm">
-              Bangalore, India | Global Remote
+              Indore, Indore
             </p>
           </div>
 
@@ -61,7 +61,7 @@ const Contact = () => {
               <FaPhone size={16} color="#6E00FF" />
             </div>
             <h4 className="font-semibold mb-1">Call Support</h4>
-            <p className="text-[#8892A4] text-sm">+91 (800) NOVA-LAB</p>
+            <p className="text-[#8892A4] text-sm">+91 6391486456</p>
           </div>
         </div>
 
