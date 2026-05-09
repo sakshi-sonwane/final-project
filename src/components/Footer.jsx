@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
@@ -37,12 +38,12 @@ const Footer = () => {
           <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-[#8892A4]">
             {["Home", "Services", "Careers", "Contact"].map((item) => (
               <li key={item}>
-                <a
-                  href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                <Link
+                  to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                   className="hover:text-white transition-colors duration-200"
                 >
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -56,12 +57,12 @@ const Footer = () => {
           <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-[#8892A4]">
             {["About", "Careers", "Contact"].map((item) => (
               <li key={item}>
-                <a
-                  href={item === "About" ? "/about" : `/${item.toLowerCase()}`}
+                <Link
+                  to={item === "About" ? "/about" : `/${item.toLowerCase()}`}
                   className="hover:text-white transition-colors duration-200"
                 >
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
