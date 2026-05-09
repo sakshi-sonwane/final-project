@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { FaCode, FaBrain, FaRocket, FaUsers } from "react-icons/fa";
 
 const About = () => {
+  const navigate = useNavigate();
   const stats = [
     { number: "5+", label: "Years of Excellence" },
     { number: "200+", label: "Projects Delivered" },

@@ -35,18 +35,16 @@ const Footer = () => {
             Laboratory
           </h4>
           <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-[#8892A4]">
-            {["Services", "Tools", "Academy", "Marketplace", "Blog"].map(
-              (item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="hover:text-white transition-colors duration-200"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ),
-            )}
+            {["Home", "Services", "Careers", "Contact"].map((item) => (
+              <li key={item}>
+                <a
+                  href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -56,10 +54,10 @@ const Footer = () => {
             Company
           </h4>
           <ul className="space-y-2 md:space-y-3 text-xs md:text-sm text-[#8892A4]">
-            {["About Us", "Careers", "Store", "Contact"].map((item) => (
+            {["About", "Careers", "Contact"].map((item) => (
               <li key={item}>
                 <a
-                  href="#"
+                  href={item === "About" ? "/about" : `/${item.toLowerCase()}`}
                   className="hover:text-white transition-colors duration-200"
                 >
                   {item}

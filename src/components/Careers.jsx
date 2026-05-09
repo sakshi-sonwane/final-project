@@ -1,5 +1,6 @@
 import React from "react";
 import { FaMapMarkerAlt, FaBriefcase, FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const jobs = [
   {
@@ -29,6 +30,7 @@ const jobs = [
 ];
 
 const Careers = () => {
+  const navigate = useNavigate();
   return (
     <div className="text-white px-6 md:px-10 py-10">
       {/* Header */}
@@ -99,7 +101,10 @@ const Careers = () => {
             opportunity opens up.
           </p>
         </div>
-        <button className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-3 border border-[#6E00FF] rounded-3xl font-semibold hover:bg-[#6E00FF] transition-all duration-300 whitespace-nowrap">
+        <button
+          onClick={() => navigate("/contact")}
+          className="w-full md:w-auto flex items-center justify-center gap-2 px-8 py-3 border border-[#6E00FF] rounded-3xl font-semibold hover:bg-[#6E00FF] transition-all duration-300 whitespace-nowrap"
+        >
           Send Portfolio
           <FaArrowRight size={12} />
         </button>

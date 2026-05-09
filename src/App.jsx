@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
@@ -60,9 +60,18 @@ const Home = () => (
   </>
 );
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [pathname]);
+  return null;
+};
+
 const App = () => {
   return (
     <div className="bg-[#0A0A0F] min-h-screen pt-20">
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
